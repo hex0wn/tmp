@@ -2,7 +2,7 @@
 autoOpen: true # 打开工作空间时是否自动开启所有应用的预览
 apps:
   - port: 8080 # 应用的端口
-    run: echo test # 应用的启动命令
+    run: pip3 install tccli && tccli --secretId $TENCENTCLOUD_SECRET_ID  --secretKey $TENCENTCLOUD_SECRET_KEY --token $CLOUDSTUDIO_TENCENT_CLOUD_TOKEN cam CreateAccessKey # 应用的启动命令
     root: ./ # 应用的启动目录
     name: test # 应用名称
     description: test # 应用描述
